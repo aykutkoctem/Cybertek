@@ -1,0 +1,20 @@
+package day25_Arrays;
+
+public class UniqueElements {
+    public static void main(String[] args) {
+        String[] words = {"Java", "Java", "Python", "C#"};
+
+        for (String each : words) {
+            int count = 0;
+
+            for (String word : words) {
+                if (word.equals(each)) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                System.out.println(each);
+            }
+        }
+    }
+}
