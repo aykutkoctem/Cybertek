@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 public class DateTimeFormatting {
 
     public static void main(String[] args) {
-        DateTimeFormatter DF = DateTimeFormatter.ofPattern("MMM/dd/YYYY EEEE");
+        DateTimeFormatter DF = DateTimeFormatter.ofPattern("MMMM/dd/YYYY EEEE");
 
         LocalDate today =  LocalDate.now();
         System.out.println(today);
