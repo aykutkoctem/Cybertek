@@ -40,6 +40,38 @@ public class CollectionUtility {
         System.out.println("----------------------------------------");
 
         String str="ABABABCDEEEE";
+        String unique="";
+        ArrayList<String> result=new ArrayList<>(Arrays.asList(str.split("")));
+        /*
+        for (String each : result) {
+            if (Collections.frequency(result,each)==1){
+                unique+=each;
+            }
+
+        }
+        System.out.println("unique = " + unique);
+
+         */
+        result.removeIf(p-> Collections.frequency(result,p)!=1);
+        System.out.println(result);
+
+       int max= Collections.max(list);
+       int min=Collections.min(list);
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+
+        ArrayList<Integer> numbers=new ArrayList<>();
+        numbers.addAll(Arrays.asList(10,10,10,9,9,8,7,6,5,4,3,2,1));
+        int firstMax=Collections.max(numbers);
+        numbers.removeIf(p-> p==Collections.max(numbers));
+        int secondMax=Collections.max(numbers);
+
+        numbers.removeIf(p-> p==Collections.max(numbers));
+        int thirdMax=Collections.max(numbers);
+
+        System.out.println("thirdMax = " + thirdMax);
+        System.out.println("secondMax = " + secondMax);
+        System.out.println("firstMax = " + firstMax);
 
     }
 }
